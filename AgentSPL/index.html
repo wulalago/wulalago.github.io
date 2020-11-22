@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Agent with Warm Start and Active Termination for Plane Localization in 3D Ultrasound</title>
+  
+  <meta name="author" content="Haoran Dou">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  <link rel="icon" type="image/png" href="images/seal_icon.png">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              
+			  <h1 style="text-align:center">
+                <name>Agent with Warm Start and Active Termination for Plane Localization in 3D Ultrasound</name>
+              </h1>
+              
+			  <p style="text-align:center">
+				  <a href="https://wulalago.github.io/">Haoran Dou</a><sup>1&#8224</sup>, 
+				  <a href="https://xy0806.github.io/">Xin Yang</a><sup>2&#8224</sup>, 
+				  <a href="https://scholar.google.com/citations?user=f9Xkd9IAAAAJ&hl=en&oi=ao">Jikuan Qian</a><sup>1</sup>, 
+				  <a href="http://bme.szu.edu.cn/20181/0907/68.html">Wufeng Xue</a><sup>1</sup>, 
+				  <a href="">Hao Qin</a><sup>1</sup>, 
+				  Xu Wang<sup>1</sup>, 
+				  <a href="https://yulequan.github.io/">Lequan Yu</a><sup>2</sup>, 
+				  <a href="https://emmaw8.github.io/">Shujun Wang</a><sup>2</sup>, 
+				  Yi Xiong<sup>3</sup>, 
+				  <a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a><sup>2</sup>, 
+				  <a href="http://bme.szu.edu.cn/20161/0326/55.html">Dong Ni</a><sup>*1</sup>.
+              </p>
+			  
+			  <p style="text-align:center">
+			  <br>1. Medical UltraSound Image Computing Lab, Shenzhen University.</br>
+			  <br>2. Department of Computer Science and Engineering, The Chinese University of Hong Kong.</br>
+			  <br>3. Department of Ultrasound, Luohu Peoples Hospital. </br>
+			  
+            </td>
+          </tr>
+        </tbody>
+		</table>
+		
+		
+		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+		
+          <tr>
+            <td>
+			<h2 style="text-align:center">Abstract</h2>
+			<p style="text-align:justify">
+			Standard plane localization is crucial for ultrasound (US) diagnosis. 
+			In prenatal US, dozens of standard planes are manually acquired with a 2D probe. 
+			It is time-consuming and operator-dependent. 
+			In comparison, 3D US containing multiple standard planes in one shot has the inherent advantages of less user-dependency and more efficiency. 
+			However, manual plane localization in US volume is challenging due to the huge search space and large fetal posture variation. 
+			In this study, we propose a novel reinforcement learning (RL) framework to automatically localize fetal brain standard planes in 3D US. 
+			Our contribution is twofold. 
+			First, we equip the RL framework with a landmark-aware alignment module to provide warm start and strong spatial bounds for the agent actions, thus ensuring its effectiveness. 
+			Second, instead of passively and empirically terminating the agent inference, we propose a recurrent neural network based strategy for active termination of the agent’s interaction procedure. 
+			This improves both the accuracy and efficiency of the localization system. 
+			Extensively validated on our in-house large dataset, our approach achieves the accuracy of 3.4mm/9.6◦and 2.7mm/9.1◦ for the transcerebellar and transthalamic plane localization, respectively. 
+			Our proposed RL framework is general and has the potential to improve the efficiency and standardization of US scanning.
+			</p>
+			</td>
+          </tr>
+        </tbody></table>
+		
+		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <h2 style="text-align:center">Method</h2>
+			  <img src="img/framework.png" style="width:95%" align="middle">
+			  <p style="text-align:justify">
+			We propose to localize fetal brain standard planes in US volumes with a RL framework, which can progressively interact with the volumes and modify the search trajectory towards the final target plane. 
+			Specifically, we equipped the RL framework with 1) a landmark-aware alignment module for warm start, to ensure its effectiveness, and also 2) a recurrent neural network based strategy for active termination of the interaction procedure, to improve its accuracy and efficiency.
+			</p>
+			  
+			</td>
+          </tr>
+		  
+        </tbody></table>
+		
+
+		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <h2 style="text-align:center">Results</h2>
+			  <img src="img/results.png" style="width:95%" align="middle">
+			<p style="text-align:justify">
+			TC (left) and TT (right) results. Top row: ground truth (left) and predicted (right) plane. Bottom row: left, active termination step (dotted red line) compared to optimal step in green dot, 3D visualization of ground truth and predicted plane (right).
+			</p>
+			</td>
+          </tr>
+		  
+        </tbody></table>
+		
+		
+		 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+		     <td style="padding:2.5%;width:15%;max-width:40%">
+          
+              <img style="width:100%;max-width:100%" alt="profile photo" src="img/cover.png" class="hoverZoomLink">
+          
+            </td>
+		  
+            <td style="padding:2.5%;width:70%;vertical-align:middle">
+                <papertitle>Agent with Warm Start and Active Termination for Plane Localization in 3D Ultrasound</papertitle>
+              <br>
+              Haoran Dou*, Xin Yang*, Jikuan Qian, Wufeng Xue, Hao Qin, Xu Wang, Lequan Yu, Shujun Wang, Yi Xiong, Pheng-Ann Heng, Dong Ni.
+              <br>
+              <em>MICCAI</em>, 2019 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
+            </td>
+
+          </tr>
+        </tbody></table>
+		
+  
+         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <h2 style="text-align:center">Acknowledgments</h2>
+			<p style="text-align:justify">
+			Funding for this research is provided by National Natural Science Foundation of China, Shenzhen Peacock Plan, Medical Scientific Research Foundation of Guangdong Province, China and National Natural Science Foundation of China.
+			</p>
+			</td>
+          </tr>
+		  
+        </tbody></table>
+		 
+
+        
+
+</body>
+
+</html>
