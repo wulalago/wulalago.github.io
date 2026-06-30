@@ -129,3 +129,7 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+p {
+  text-align: justify;
+}
